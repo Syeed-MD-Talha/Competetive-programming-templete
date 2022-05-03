@@ -1,0 +1,88 @@
+//                             In the name of Allah 
+ 
+ 
+/*                     Don't give up until the last second.
+                                            Practice makes a man perfect
+                       pain is temporary pride is forever
+*/
+ 
+ 
+//===================================================================================================================//
+#include<bits/stdc++.h>                                                                                              //                                                                                   
+using namespace std;                                                                                                 //
+typedef long long ll;                                                                                                //
+typedef unsigned long long ul;                                                                                       //
+#define to_lower(x)  transform(x.begin(), x.end(), x.begin(), ::tolower)                                             //
+#define to_upper(x)  transform(x.begin(), x.end(), x.begin(), ::toupper)                                             //
+#define Clock            clock_t tStart = clock()                                                                    //
+#define FastIO           ios::sync_with_stdio(false); cin.tie(nullptr); cout.tie(nullptr)                            //
+#define Freopen          freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout)                        //
+#define Runtime          fprintf(stderr, "\n>> Runtime: %.10fs\n", (double) (clock() - tStart) / CLOCKS_PER_SEC)     //
+#define pi acos(-1)                                                                                                  //
+#define ll long long                                                                                                 //
+#define ull unsigned long long    
+#define ff                  first
+#define ss                  second                                                                                   //
+#define vec vector<ll>                                                                                               //                                               
+#define test   ll ttt;cin>>ttt;while(ttt--)                                                                          //                                                                                                     //
+#define eps 1e-12                                                                                                    //
+#define pb push_back                                                                                                 //                                                                     
+#define mem(a,b) memset(a, b, sizeof(a) )                                                                            //
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(6); cout.setf(ios::fixed,ios::floatfield);           //
+#define MAX              (1000000007)
+int dx[]={+1,-1,0,0,-1,-1,+1,+1};
+int dy[]={0,0,+1,-1,+1,-1,+1,-1};                                                                                  //
+//================================================================================================================== //
+//........................******Sieve******...............
+vec vv;
+const ll range=1e7+123;
+bitset<range>prime;
+void sieve()
+{
+    prime[0]=1;
+    prime[1]=1;
+    for(ll i=2; i<=range; i++)
+    {
+        if(prime[i]==0)
+        {
+            for(ll j=i*i; j<=range; j+=i)prime[j]=1;
+        }
+    }
+    vv.pb(2);
+    for(ll i=3; i<=range; i+=2)if(prime[i]==0)vv.pb(i);
+}
+//.........................................................
+ 
+//............<<<<<<<<<start>>>>>>>>>...................
+
+void Main()
+{   
+   cout<<1e2<<endl;
+}
+//...........<<<<<<<<<<end>>>>>>>>>>>...............
+ 
+int main()
+{
+ 
+    FastIO;
+ 
+#ifndef ONLINE_JUDGE
+    Clock;
+    Freopen;
+#endif
+//......................mainfunction...............
+ 
+ 
+    sieve();
+  //test{Main();}
+    Main();
+ 
+ 
+ 
+ 
+//....................end_the mainfunction.......
+#ifndef ONLINE_JUDGE
+    Runtime;
+#endif
+ 
+}
