@@ -1,0 +1,48 @@
+class Solution {
+public:
+    int romanToInt(string s) {
+        
+          map<char,int>H;
+            H['I']=1;
+            H['V']=5;
+            H['X']=10;
+            H['L']=50;
+            H['C']=100;
+            H['D']=500;
+            H['M']=1000;
+            
+            int sum=0;
+            
+            for(int i=s.size()-1;i>=0;i--)
+            {
+                 if(i>0)
+                 {
+                     if(s[i-1]=='I' and s[i]!='I' and (H[s[i]]>H[s[i-1]]))
+                     {
+                             sum+=H[s[i]]-1;
+                             i--;
+                     }
+                    else if(s[i-1]=='X' and s[i]!='X' and (H[s[i]]>H[s[i-1]]))
+                     {
+                             sum+=H[s[i]]-10;
+                             i--;
+                     }
+                         
+                   else if(s[i-1]=='C' and s[i]!='C' and (H[s[i]]>H[s[i-1]]))
+                     {
+                             sum+=H[s[i]]-100;
+                               i--;
+                     }
+                         
+                    else sum+=H[s[i]];
+                     
+                 }
+                    else sum+=H[s[i]];
+                    
+                    cout<<sum<<endl;
+            }
+            
+            return sum;
+           
+    }
+};
