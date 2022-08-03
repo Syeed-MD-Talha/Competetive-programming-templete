@@ -1,0 +1,43 @@
+class Solution {
+public:
+    string addStrings(string num1, string num2) {
+        
+            
+            int carry=0,n=max(num1.size(),num2.size()); 
+            string st; 
+            
+            for(int i=1;i<=n;i++)
+            {
+                    int x,y; x=y=0;  
+                    
+                    if(!num1.empty())
+                    {
+                            x=num1.back()-'0';
+                            num1.pop_back();
+                    }
+                    
+                     if(!num2.empty())
+                    {
+                            y=num2.back()-'0';
+                            num2.pop_back();
+                    }
+                    
+                    carry+=(x+y);
+                    
+                    cout<<num1.size()<<" "<<num2.size()<<endl;
+                   
+                    st+=(carry%10)+'0';
+                    
+                    carry/=10;
+                    
+                    
+                    
+            }
+            
+            if(carry>0)st+=(carry+'0');
+            
+            reverse(st.begin(),st.end());
+            
+            return st;
+    }
+};
